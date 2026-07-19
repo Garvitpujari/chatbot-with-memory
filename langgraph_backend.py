@@ -38,3 +38,40 @@ graph.add_edge(START,'chat_node')
 graph.add_edge('chat_node',END)
 
 chatbot=graph.compile(checkpointer=checkpointer)
+
+
+# block to fetch message
+# CONFIG={'configurable':{'thread_id':'thread-1'}}
+# response=chatbot.invoke(
+#             {'messages':[HumanMessage(content='hi my name is  garvit')]},    
+#                 config=CONFIG
+
+#         )
+
+# print(chatbot.get_state(config=CONFIG).values['messages'])
+
+
+
+# stream=chatbot.stream(
+#     {'messages':[HumanMessage(content='what is the receipe to make pasta ')]},    
+#     config={'configurable':{'thread_id':'thread-1'}},
+#     stream_mode='messages'
+
+# )
+# print(type(stream)) # generator hoga
+
+
+
+
+# backend me koi change nhi karenge frontend m krenge
+
+# for message_chunk , metadata in chatbot.stream(
+#     {'messages':[HumanMessage(content='what is the receipe to make pasta ')]},    
+#     config={'configurable':{'thread_id':'thread-1'}},
+#     stream_mode='messages'
+
+# ):
+#     if message_chunk.content :
+#         print(message_chunk.content , end=" " ,flush=True)
+
+
