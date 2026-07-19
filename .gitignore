@@ -1,6 +1,8 @@
+chatbot.db
+chatbot.db-shm
+chatbot.db-wal
+*.bin
 __pycache__/
 *.pyc
 .env
-venv/
-myenv/
-.streamlit/
+tempCodeRunnerFile.python
